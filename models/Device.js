@@ -17,7 +17,9 @@ module.exports = (sequelize) => {
     location: { type: DataTypes.STRING(150) },
     lastSeen: { type: DataTypes.DATE },
     status: { type: DataTypes.ENUM('online', 'offline', 'error'), defaultValue: 'offline' },
-    isActive: { type: DataTypes.BOOLEAN, defaultValue: true }
+    isActive: { type: DataTypes.BOOLEAN, defaultValue: true },
+
+    
   }, {
     sequelize,
     modelName: 'Device',
