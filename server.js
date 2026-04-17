@@ -143,7 +143,7 @@ app.use(errorHandler);
 // ====================== START SERVER ======================
 const PORT = process.env.PORT || 4000;
 
-sequelize.sync({ alter: true, force: false })
+sequelize.sync({ alter: false, force: false })
   .then(() => {
     server.listen(PORT, () => {
       logger.info(`🚀 Server running on port ${PORT}`);
